@@ -1,0 +1,145 @@
+:root {
+    /* primary colors */
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* neutral colors */
+--Transparent-white: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: 'Lexend Deca', sans-serif;;
+    font-size: 0.938rem;
+    background: var(--Very-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+#card {
+    max-width: 60rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.8rem;
+    
+}
+
+.car-section {
+    height: 30rem;
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 3rem;
+}
+
+.car-section--sedans {
+    background: var(--Bright-orange);
+    border-radius: 0.8rem 0 0 0.8rem;
+}
+
+.car-section--suvs {
+    background: var(--Dark-cyan);
+}
+
+.car-section--luxury {
+    background: var(--Very-dark-cyan);
+    border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.car-section__header {
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--Very-light-gray);
+    font-size: 2rem;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 1.6rem;
+}
+
+.car-section__text {
+    color: var(--Transparent-white);
+    position: relative;
+    bottom: 2.6rem;
+    line-height: 1.5rem;
+    padding-right: 1rem;
+    
+}
+
+.car-section__link {
+    background: var(--Very-light-gray);
+    padding: 1rem;
+    border-radius: 2rem;
+    max-width: 7rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.car-section__link--hover:hover {
+    border: 0.125rem solid var(--Very-light-gray);
+    color: var(--Very-light-gray);
+    transition: all 0.4s;
+    background: transparent;
+}
+
+.car-section__link--orange {
+    color: var(--Bright-orange);
+}
+
+.car-section__link--cyan {
+    color: var(--Dark-cyan);
+}
+
+.car-section__link--dark-cyan {
+    color: var(--Very-dark-cyan);
+}
+
+.attribution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.attribution__text {
+    color: var(--Very-dark-cyan);
+}
+
+.attribution__link {
+    text-decoration: none;
+    color: var(--Bright-orange);
+}
+
+
+@media screen and (max-width: 38rem) {
+    body {
+        min-width: 100vw;
+        row-gap: 1rem;
+    }
+    #card {
+        margin: 3rem 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .car-section--sedans {
+        border-radius: 0.8rem 0.8rem 0 0;
+    }
+
+    .car-section--luxury {
+        border-radius: 0 0 0.8rem 0.8rem;
+    }
+
+    .attribution {
+        margin-bottom: 1rem;
+    }
+}
